@@ -1,35 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// style
+import { ThemeProvider } from "styled-components";
+import GlobalStyle from "./styles/GlobalStyle";
 
-function App() {
-  const [count, setCount] = useState(0)
+// recoil
+import { useRecoilState, useRecoilValue } from "recoil";
+import { themeMode } from "./recoil/Theme";
+
+// theme
+import { darkTheme, lightTheme } from "./styles/theme";
+
+// constant
+import { THEME } from "./constants/index";
+
+// router
+import { routers } from "./router";
+import { RouterProvider, Routes } from "react-router-dom";
+
+export default function App() {
+  const themeType = useRecoilValue<string>(themeMode);
+  const theme = themeType === THEME.LIGHT_THEME ? lightTheme : darkTheme;
+
+  // 헤더로 이동하면 될 듯하다!
+  const [handleThemeMode, setHandleThemeMode] = useRecoilState<string>(themeMode);
+
+  const handleTheme = () => {
+    if (handleThemeMode === "dark") {
+      localStorage.setItem("theme", "light");
+      setHandleThemeMode("light");
+    } else if (handleThemeMode === "light") {
+      localStorage.setItem("theme", "dark");
+      setHandleThemeMode("dark");
+    }
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <RouterProvider router={routers} />
+    </ThemeProvider>
+  );
 }
-
-export default App
