@@ -3,7 +3,7 @@ import { Router as RemixRouter } from "@remix-run/router/dist/router";
 
 // react component
 import GeneralLayout from "./layout/GeneralLayout";
-import Home from "./component/Home/Home";
+import Home from "./page/Home/Home";
 
 export const routers: RemixRouter = createBrowserRouter([
   {
