@@ -55,9 +55,9 @@ strong {
 em {
     font-style: italic;
 }
-p{
+/* p{
 	word-break: break-all;
-}
+} */
 `;
 
 export default GlobalStyle;

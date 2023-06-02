@@ -5,20 +5,22 @@ export const Container = styled.section`
   //Info color를 변경해야 하나? 고민해보기!
   background: linear-gradient(#5d475e, #877678);
   color: black;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Wrapper = styled.div`
   margin-top: 3rem;
   display: flex;
-  /* justify-content: space-around; */
   align-items: center;
+  flex-direction: column;
+  max-width: 1140px;
   gap: 10px;
-  border: 1px solid black;
 `;
 
-export const Profile = styled.div`
-  border: 1px solid black;
-`;
+export const Profile = styled.div``;
 
 export const PersonalImg = styled.img`
   width: 10rem;
@@ -39,7 +41,6 @@ export const Heading = styled.h1`
   transform: skew(10deg);
 `;
 export const PersonalName = styled.h3`
-  /* font-size: 0rem; */
   color: #fff;
   background-color: #e41c6f;
   margin: 0.5rem 0;
@@ -50,8 +51,23 @@ export const PersonalName = styled.h3`
 `;
 
 export const ContactInfo = styled.div`
-  border: 1px solid blue;
-  padding: 1rem 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
 `;
-
+export const RightHeading = styled.div`
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsla(0, 0%, 100%, 0.7);
+  text-align: center;
+`;
+export const RightUserInfo = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 3rem;
+  @media ${(props) => props.theme.breakpoints.TABLETMIN} {
+  }
+`;
 export const Icon = styled.div``;

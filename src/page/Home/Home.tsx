@@ -6,7 +6,7 @@ import Introductions from "../../component/Introduction/Introduction";
 const Home = () => {
   return (
     <S.Container>
-      <Info></Info>
+      <Info />
       <Introductions />
     </S.Container>
   );

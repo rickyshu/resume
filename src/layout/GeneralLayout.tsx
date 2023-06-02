@@ -12,7 +12,7 @@ export default function GeneralLayout() {
       <Main>
         <Outlet />
       </Main>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
-import { RiSunFill } from "react-icons/ri";
-import { RiMoonClearFill } from "react-icons/ri";
+import { RiSunFill, RiMoonClearFill } from "react-icons/ri";
 
 interface HedearProps {
   headerColor: boolean;
@@ -13,6 +12,7 @@ export const Header = styled.header<HedearProps>`
   z-index: 1;
   background-color: ${(props) => (props.headerColor ? "#e41c6f" : "transparent")};
   color: hsla(0, 0%, 100%, 0.7);
+
   & .active {
     background-color: #e41c6f;
   }
@@ -27,7 +27,6 @@ export const Wrapper = styled.section`
   justify-content: space-between;
   align-items: center;
   padding: 0 1.5rem;
-  border: 1px solid red;
 `;
 
 export const Logo = styled.div`
