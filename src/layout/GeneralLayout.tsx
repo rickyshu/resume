@@ -3,7 +3,6 @@ import { Outlet } from "react-router-dom";
 // react-component
 import Header from "./header/header";
 import Main from "./main/Main";
-import Footer from "./footer/Footer";
 
 export default function GeneralLayout() {
   return (
@@ -12,7 +11,6 @@ export default function GeneralLayout() {
       <Main>
         <Outlet />
       </Main>
-      {/* <Footer /> */}
     </>
   );
 }

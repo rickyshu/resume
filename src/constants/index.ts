@@ -4,11 +4,16 @@ import { RiUserFill, RiShoppingBagFill, RiPhoneFill, RiMailFill, RiPencilFill } 
 export const THEME: Theme = {
   DARK_THEME: "dark",
   LIGHT_THEME: "light",
-};
+} as const;
 
 export const SIZE = {
   TABLET: "768px", // 768이상부터 적용
   DESKTOP: "1110px", // 1200이상부터 적용
+  MAX_WIDTH: "1140px",
+} as const;
+
+export const COLOR = {
+  TITLE_COLOR: "hsla(0, 0%, 100%, 0.7)",
 } as const;
 
 export const CONTACTINFO: ContactInfoArray = {

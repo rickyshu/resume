@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
-export const Container = styled.section`
+import { RiFilePpt2Fill } from "react-icons/ri";
+
+import { COLOR } from "../../constants";
+
+const { TITLE_COLOR } = COLOR;
+
+export const Container = styled.article`
   padding: 3rem 1rem;
-  //Info color를 변경해야 하나? 고민해보기!
   background: linear-gradient(#5d475e, #877678);
   color: black;
-  /* border: 1px solid red; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,12 +58,14 @@ export const ContactInfo = styled.div`
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  margin: 1rem auto;
 `;
 export const RightHeading = styled.div`
   font-size: 2rem;
   font-weight: 700;
-  color: hsla(0, 0%, 100%, 0.7);
+  color: ${TITLE_COLOR};
   text-align: center;
+  text-transform: uppercase;
 `;
 export const RightUserInfo = styled.div`
   display: flex;
@@ -70,4 +76,20 @@ export const RightUserInfo = styled.div`
   @media ${(props) => props.theme.breakpoints.TABLETMIN} {
   }
 `;
-export const Icon = styled.div``;
+export const ConvertToPdf = styled.button`
+  /* border: 1px solid red; */
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 0.7rem;
+  background-color: red;
+  &:hover {
+    background-color: #a00;
+  }
+`;
+
+export const PdfIcon = styled(RiFilePpt2Fill)`
+  font-size: 1.2rem;
+`;

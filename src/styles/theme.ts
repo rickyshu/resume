@@ -1,8 +1,9 @@
 import { DefaultTheme } from "styled-components";
 
-import { SIZE } from "../constants/index";
+import { SIZE, COLOR } from "../constants/index";
 
 const { TABLET, DESKTOP } = SIZE;
+const { TITLE_COLOR } = COLOR;
 
 declare module "styled-components" {
   export interface DefaultTheme {
@@ -10,6 +11,7 @@ declare module "styled-components" {
     themeStyle: {
       backgroundColor: string;
       fontColor: string;
+      titleColor: string;
     };
     breakpoints: {
       TABLETMIN: string;
@@ -23,6 +25,7 @@ export const lightTheme: DefaultTheme = {
   themeStyle: {
     backgroundColor: "#ffffff",
     fontColor: "#000000",
+    titleColor: "#000000",
   },
   breakpoints: {
     TABLETMIN: `screen and (min-width: ${TABLET})`,
@@ -35,6 +38,7 @@ export const darkTheme: DefaultTheme = {
   themeStyle: {
     backgroundColor: "#000000",
     fontColor: "#ffffff",
+    titleColor: `${TITLE_COLOR}`,
   },
   breakpoints: {
     TABLETMIN: `screen and (min-width: ${TABLET})`,
