@@ -12,6 +12,8 @@ declare module "styled-components" {
       backgroundColor: string;
       fontColor: string;
       titleColor: string;
+      ArrowBackGroundColor: string;
+      ArrowHoverColor: string;
     };
     breakpoints: {
       TABLETMIN: string;
@@ -26,6 +28,8 @@ export const lightTheme: DefaultTheme = {
     backgroundColor: "#ffffff",
     fontColor: "#000000",
     titleColor: "#000000",
+    ArrowBackGroundColor: "#808080",
+    ArrowHoverColor: "#585858",
   },
   breakpoints: {
     TABLETMIN: `screen and (min-width: ${TABLET})`,
@@ -39,6 +43,8 @@ export const darkTheme: DefaultTheme = {
     backgroundColor: "#000000",
     fontColor: "#ffffff",
     titleColor: `${TITLE_COLOR}`,
+    ArrowBackGroundColor: "#f3f3f3",
+    ArrowHoverColor: "#C0C0C0",
   },
   breakpoints: {
     TABLETMIN: `screen and (min-width: ${TABLET})`,

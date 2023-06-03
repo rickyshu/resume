@@ -7,7 +7,7 @@ import Blogs from "../../component/Blogs/Blogs";
 import Projects from "../../component/Projects/Projects";
 import Studies from "../../component/Studies/Studies";
 import Footer from "../../layout/footer/Footer";
-
+import Arrow from "../../component/Arrow/Arrow";
 function Home() {
   return (
     <S.Container>
@@ -17,6 +17,7 @@ function Home() {
       <Blogs />
       <Projects />
       <Studies />
+      <Arrow />
       <Footer />
     </S.Container>
   );
