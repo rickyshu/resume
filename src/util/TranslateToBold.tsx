@@ -10,9 +10,7 @@ export function TranslateBold({ children, className, as = "p" }: TranslateBoldPr
   const pattern = /(\*\*.*?\*\*)/;
 
   const text = children;
-  console.log("text split", text.split(pattern));
   const parts = text.split(pattern).filter((x) => x.length > 0);
-  console.log("parts", parts);
 
   const elements = parts.map((part, index) => {
     if (part.match(pattern)) {

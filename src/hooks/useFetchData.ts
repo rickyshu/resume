@@ -7,7 +7,7 @@ export function useFetchData<T>(url: string) {
   const fetchData = async (url: string) => {
     try {
       const response = await axios.get(url);
-      setData(response.data.data);
+      setData(response.data);
     } catch (error) {
       console.error("Error fetching data:", error);
     }

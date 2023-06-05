@@ -4,8 +4,7 @@ import { SkillsInfo } from "../../types";
 import Description from "./Description";
 
 function Skills() {
-  const { data: skillData } = useFetchData<Array<SkillsInfo>>("../../../public/data/Contact/Skills.json");
-
+  const { data: skillData } = useFetchData<Array<SkillsInfo>>(`${import.meta.env.VITE_API_URL}/skills`);
   return (
     <S.Container>
       <S.Wrapper>
