@@ -7,8 +7,8 @@ export const THEME: Theme = {
 } as const;
 
 export const SIZE = {
-  TABLET: "768px", // 768이상부터 적용
-  DESKTOP: "1110px", // 1200이상부터 적용
+  TABLET: "670px", // 670이상부터 적용
+  DESKTOP: "1110px", // 1110이상부터 적용
   MAX_WIDTH: "1140px",
 } as const;
 

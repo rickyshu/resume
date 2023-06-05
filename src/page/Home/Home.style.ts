@@ -5,6 +5,9 @@ import { RiArrowUpLine } from "react-icons/ri";
 export const Container = styled.main`
   width: 100%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 `;
 
 export const ArrowUpIcon = styled(RiArrowUpLine)`

@@ -15,3 +15,10 @@ export interface UserContactInfo {
 export interface ContactInfoArray {
   PERSONAL_INFO: Array<UserContactInfo>;
 }
+
+export interface SkillsInfo {
+  id: number;
+  skillImg: string;
+  skillName: string;
+  description: string;
+}

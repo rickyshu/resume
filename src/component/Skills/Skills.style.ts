@@ -5,9 +5,7 @@ import { SIZE } from "../../constants";
 const { MAX_WIDTH } = SIZE;
 
 export const Container = styled.article`
-  height: 500px;
-  border: 1px solid blue;
-  padding: 1rem 1rem;
+  padding: 1rem;
   display: flex;
   justify-content: center;
 `;
@@ -20,5 +18,8 @@ export const HeadingTitle = styled.h1`
   color: ${(props) => props.theme.themeStyle.titleColor};
   font-size: 2rem;
   font-weight: 700;
+  text-align: center;
   text-transform: uppercase;
+  border-bottom: 1px solid grey;
+  padding: 1rem 0;
 `;
