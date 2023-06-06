@@ -14,6 +14,7 @@ declare module "styled-components" {
       titleColor: string;
       ArrowBackGroundColor: string;
       ArrowHoverColor: string;
+      cardColor: string;
     };
     breakpoints: {
       TABLETMIN: string;
@@ -30,6 +31,7 @@ export const lightTheme: DefaultTheme = {
     titleColor: "#000000",
     ArrowBackGroundColor: "#808080",
     ArrowHoverColor: "#585858",
+    cardColor: "#F5F5F5",
   },
   breakpoints: {
     TABLETMIN: `screen and (min-width: ${TABLET})`,
@@ -45,6 +47,7 @@ export const darkTheme: DefaultTheme = {
     titleColor: `${TITLE_COLOR}`,
     ArrowBackGroundColor: "#f3f3f3",
     ArrowHoverColor: "#C0C0C0",
+    cardColor: "#303030",
   },
   breakpoints: {
     TABLETMIN: `screen and (min-width: ${TABLET})`,

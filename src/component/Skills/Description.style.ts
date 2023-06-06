@@ -24,6 +24,7 @@ export const Container = styled.section`
   & p {
     ${FlexCenter}
     padding: 0.5rem;
+    width: 70%;
   }
 `;
 

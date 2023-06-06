@@ -20,5 +20,9 @@ export const HeadingTitle = styled.h1`
   color: ${(props) => props.theme.themeStyle.titleColor};
   font-size: 2rem;
   font-weight: 700;
+  text-align: center;
   text-transform: uppercase;
+  border-bottom: 1px solid gray;
+  padding: 1rem 0;
+  margin-bottom: 1.3rem;
 `;

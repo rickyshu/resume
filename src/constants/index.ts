@@ -14,6 +14,7 @@ export const SIZE = {
 
 export const COLOR = {
   TITLE_COLOR: "hsla(0, 0%, 100%, 0.7)",
+  SAHDOW_COLOR: "#C4C4C4",
 } as const;
 
 export const CONTACTINFO: ContactInfoArray = {

@@ -3,7 +3,7 @@ import * as S from "./Home.style";
 import Info from "../../component/Info/Info";
 import Introductions from "../../component/Introduction/Introduction";
 import Skills from "../../component/Skills/Skills";
-import Blogs from "../../component/Blogs/Blogs";
+import Archiving from "../../component/Archiving/Archiving";
 import Projects from "../../component/Projects/Projects";
 import Studies from "../../component/Studies/Studies";
 import Footer from "../../layout/footer/Footer";
@@ -14,7 +14,7 @@ function Home() {
       <Info />
       <Introductions />
       <Skills />
-      <Blogs />
+      <Archiving />
       <Projects />
       <Studies />
       <Arrow />

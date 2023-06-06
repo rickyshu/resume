@@ -22,3 +22,17 @@ export interface SkillsInfo {
   skillName: string;
   description: string;
 }
+
+export type ArchivingDescriptionLists = {
+  id: number;
+  content: string;
+};
+
+export interface ArchivingInfo {
+  id?: number;
+  archLink: string;
+  logoImg: string;
+  logoName: string;
+  description: string;
+  description_lists: Array<ArchivingDescriptionLists>;
+}
