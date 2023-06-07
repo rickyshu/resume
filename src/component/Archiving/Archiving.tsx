@@ -6,8 +6,6 @@ import ArchivingCard from "./ArchivingCard";
 function Archiving() {
   const { data: ArchivingInfo } = useFetchData<Array<ArchivingInfo>>(`${import.meta.env.VITE_API_URL}/archiving`);
 
-  console.log(ArchivingInfo);
-
   return (
     <S.Container>
       <S.Wrapper>

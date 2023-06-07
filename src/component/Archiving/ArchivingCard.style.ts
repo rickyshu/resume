@@ -9,7 +9,6 @@ export const Container = styled.article`
   flex-direction: column;
   gap: 10px;
   padding: 1rem;
-  /* border: 1px solid black; */
   border-radius: 8px;
   background-color: ${(props) => props.theme.themeStyle.cardColor};
   box-shadow: 0 0.3rem 0.3rem 0 ${(props) => (props.theme.value === "light" ? SAHDOW_COLOR : "white")};

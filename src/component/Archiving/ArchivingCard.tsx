@@ -2,7 +2,6 @@ import * as S from "./ArchivingCard.style";
 import { ArchivingInfo, ArchivingDescriptionLists } from "../../types";
 
 function ArchivingCard({ archLink, logoImg, logoName, description, description_lists }: ArchivingInfo) {
-  console.log(logoImg);
   return (
     <S.Container>
       <S.LogoSection>
