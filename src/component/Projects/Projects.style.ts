@@ -5,7 +5,6 @@ import { SIZE } from "../../constants";
 const { MAX_WIDTH } = SIZE;
 
 export const Container = styled.article`
-  height: 500px;
   border: 1px solid blue;
   padding: 1rem 1rem;
   display: flex;
@@ -25,4 +24,10 @@ export const HeadingTitle = styled.h1`
   border-bottom: 1px solid gray;
   padding: 1rem 0;
   margin-bottom: 1.3rem;
+`;
+
+export const CardWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 `;

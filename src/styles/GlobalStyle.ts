@@ -18,6 +18,12 @@ footer, header, hgroup, menu, nav, section {
 }
 html {
 	font-family: 'Noto Sans KR', sans-serif;
+	@media ${(props) => props.theme.breakpoints.TABLETMIN}{
+		font-size:18px;
+	}
+	@media ${(props) => props.theme.breakpoints.DESKTOPMIN}{
+		font-size:20px;
+	}
 }
 body {
 	background-color: ${(props) => props.theme.themeStyle.backgroundColor};
@@ -55,9 +61,9 @@ strong {
 em {
     font-style: italic;
 }
-/* p{
+p{
 	word-break: break-all;
-} */
+}
 `;
 
 export default GlobalStyle;

@@ -36,3 +36,22 @@ export interface ArchivingInfo {
   description: string;
   description_lists: Array<ArchivingDescriptionLists>;
 }
+
+// project
+export interface ProjectImg {
+  url: string;
+  title: string;
+}
+
+export interface ProjectInfo {
+  id?: number;
+  name: string;
+  period: string;
+  summary: string;
+  description: string;
+  teckStack: Array<string>;
+  repositoryLink: string;
+  projectImage: Array<ProjectImg>;
+  projectLink: string;
+  projectVideo?: string;
+}
