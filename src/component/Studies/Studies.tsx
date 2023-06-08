@@ -13,8 +13,8 @@ function Studies() {
   const { data: StudiesData } = useFetchData<Array<StudiesInfo>>(`${import.meta.env.VITE_API_URL}/studies`);
   return (
     <S.Container>
+      <S.HeadingTitle>Studies</S.HeadingTitle>
       <S.Wrapper>
-        <S.HeadingTitle>Studies</S.HeadingTitle>
         <S.ContentSection>
           <StudiesCard studyName={"스터디 이름"} period={"참여기간"} studyLink={"/"} />
           {(StudiesData ?? []).map(({ id, period, studyLink, studyName }: StudiesInfo) => {

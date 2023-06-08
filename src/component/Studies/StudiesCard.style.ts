@@ -6,19 +6,20 @@ import { COLOR } from "../../constants";
 const { SAHDOW_COLOR } = COLOR;
 
 export const Container = styled.section`
-  padding: 0.5rem;
+  padding: 0.5rem 2rem;
   display: flex;
-  justify-content: space-evenly;
-  gap: 10px;
+  gap: 15px;
 `;
 
 const CommonStyle = css`
-  /* flex: 1; */
-  display: flex;
+  flex: 1;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   border: 1px solid black;
-  flex: 0 1 300px;
+  border-radius: 8px;
+  padding: 0.2rem;
+  text-align: center;
 `;
 
 export const StudyName = styled.div`
@@ -27,6 +28,7 @@ export const StudyName = styled.div`
 
 export const Period = styled.div`
   ${CommonStyle};
+  background-color: ${SAHDOW_COLOR};
 `;
 
 export const StudyLink = styled.a`

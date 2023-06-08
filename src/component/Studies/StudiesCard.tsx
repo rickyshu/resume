@@ -8,7 +8,9 @@ function StudiesCard({ period, studyLink, studyName }: StudiesInfo) {
     <S.Container>
       <S.StudyName>{studyName}</S.StudyName>
       <S.Period>{period}</S.Period>
-      <S.StudyLink href={studyLink}>참고링크</S.StudyLink>
+      <S.StudyLink href={studyLink} target="_blank">
+        참고링크
+      </S.StudyLink>
     </S.Container>
   );
 }
