@@ -5,10 +5,10 @@ import { useState } from "react";
 import { themeMode } from "../../recoil/Theme";
 import { useRecoilState } from "recoil";
 
-type LinkName = readonly ["About Me", "Introduction", "Skills", "Blogs", "Projects", "Studies"];
+type LinkName = readonly ["About Me", "Introduction", "Skills", "Blogs", "Projects", "Studies", "Languages"];
 
 const Header = () => {
-  const navList: LinkName = ["About Me", "Introduction", "Skills", "Blogs", "Projects", "Studies"];
+  const navList: LinkName = ["About Me", "Introduction", "Skills", "Blogs", "Projects", "Studies", "Languages"];
 
   const [headerColor, setHeaderColor] = useState<boolean>(false);
 

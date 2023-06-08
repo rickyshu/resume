@@ -3,9 +3,6 @@ import * as S from "./ProjectCard.style";
 // type
 import { ProjectInfo } from "../../types";
 
-// util
-import { TranslateBold } from "../../util/TranslateToBold";
-
 // react component
 import ImageSlider from "./ImageSlider";
 import ProjectContent from "./ProjectContent";

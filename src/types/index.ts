@@ -55,3 +55,12 @@ export interface ProjectInfo {
   projectLink: string;
   projectVideo?: string;
 }
+
+// studies
+
+export interface StudiesInfo {
+  id?: number;
+  studyName: string;
+  period: string;
+  studyLink: string;
+}
