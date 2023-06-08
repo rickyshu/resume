@@ -7,7 +7,10 @@ const { MAX_WIDTH } = SIZE;
 export const Container = styled.article`
   padding: 1rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  gap: 25px;
 `;
 
 export const Wrapper = styled.div`

@@ -8,8 +8,8 @@ function Archiving() {
 
   return (
     <S.Container>
+      <S.HeadingTitle>Archiving</S.HeadingTitle>
       <S.Wrapper>
-        <S.HeadingTitle>Archiving</S.HeadingTitle>
         <S.CardSection>
           {(ArchivingInfo ?? []).map(({ id, archLink, logoImg, logoName, description, description_lists }: ArchivingInfo) => {
             return <ArchivingCard key={id} archLink={archLink} logoImg={logoImg} logoName={logoName} description={description} description_lists={description_lists} />;

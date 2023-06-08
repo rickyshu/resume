@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 const FlexCenter = css`
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   @media ${(props) => props.theme.breakpoints.TABLETMIN} {
     justify-content: center;
@@ -13,7 +13,8 @@ export const Container = styled.section`
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
   gap: 10px;
   border-bottom: 1px solid rgba(128, 128, 128, 0.5);
 
@@ -22,7 +23,6 @@ export const Container = styled.section`
   }
 
   & p {
-    ${FlexCenter}
     padding: 0.5rem;
     width: 70%;
   }

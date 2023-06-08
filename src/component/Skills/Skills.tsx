@@ -7,8 +7,8 @@ function Skills() {
   const { data: skillData } = useFetchData<Array<SkillsInfo>>(`${import.meta.env.VITE_API_URL}/skills`);
   return (
     <S.Container>
+      <S.HeadingTitle>Skills</S.HeadingTitle>
       <S.Wrapper>
-        <S.HeadingTitle>Skills</S.HeadingTitle>
         {(skillData ?? []).map(({ id, skillImg, skillName, description }: SkillsInfo) => {
           return <Description key={id} skillImg={skillImg} skillName={skillName} description={description} />;
         })}

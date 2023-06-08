@@ -1,7 +1,9 @@
 import * as S from "./header.style";
 
+// react hooks
 import { useState } from "react";
 
+// recoil
 import { themeMode } from "../../recoil/Theme";
 import { useRecoilState } from "recoil";
 

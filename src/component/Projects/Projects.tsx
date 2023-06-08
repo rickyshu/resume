@@ -8,8 +8,8 @@ function Projects() {
   const { data: projectInfo } = useFetchData<Array<ProjectInfo>>(`${import.meta.env.VITE_API_URL}/project`);
   return (
     <S.Container>
+      <S.HeadingTitle>Projects</S.HeadingTitle>
       <S.Wrapper>
-        <S.HeadingTitle>Projects</S.HeadingTitle>
         <S.CardWrapper>
           {(projectInfo ?? []).map(({ id, name, period, summary, description, teckStack, repositoryLink, projectImage, projectLink, projectVideo }: ProjectInfo) => {
             return <ProjectCard key={id} name={name} period={period} summary={summary} description={description} teckStack={teckStack} repositoryLink={repositoryLink} projectImage={projectImage} projectLink={projectLink} projectVideo={projectVideo} />;
