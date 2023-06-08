@@ -10,6 +10,16 @@ const GlobalStyle = createGlobalStyle`
 	font: inherit;
 	vertical-align: baseline;
 	text-decoration:none;
+
+	::-webkit-scrollbar {
+  width: 4px;
+	}
+ 
+	::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #e41c6f;
+	}
+
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
