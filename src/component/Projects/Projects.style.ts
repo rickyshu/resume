@@ -5,8 +5,7 @@ import { SIZE } from "../../constants";
 const { MAX_WIDTH } = SIZE;
 
 export const Container = styled.article`
-  border: 1px solid blue;
-  padding: 1rem 1rem;
+  padding: 1rem;
   display: flex;
   justify-content: center;
 `;
