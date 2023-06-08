@@ -6,7 +6,6 @@ import ProjectCard from "./ProjectCard";
 
 function Projects() {
   const { data: projectInfo } = useFetchData<Array<ProjectInfo>>(`${import.meta.env.VITE_API_URL}/project`);
-  console.log(projectInfo);
   return (
     <S.Container>
       <S.Wrapper>
