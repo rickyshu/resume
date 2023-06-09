@@ -17,7 +17,7 @@ export const SlideImg = styled.img`
   width: 100%;
   object-fit: contain;
   border-radius: 8px;
-  /* filter: contrast(150%) brightness(80%) saturate(200%); */
+  filter: ${(props) => (props.theme.value === "light" ? "brightness(100%)" : "brightness(60%) contrast(120%)")};
 `;
 
 export const Index = styled.p`
