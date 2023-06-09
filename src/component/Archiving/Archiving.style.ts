@@ -31,7 +31,7 @@ export const CardSection = styled.div`
   display: flex;
   flex-direction: column;
   gap: 17px;
-  @media ${(props) => props.theme.breakpoints.TABLETMIN} {
+  @media ${(props) => props.theme.breakpoints.TABLETBIG} {
     flex-direction: row;
   }
 `;

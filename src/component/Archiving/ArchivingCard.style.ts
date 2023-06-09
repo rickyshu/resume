@@ -16,7 +16,7 @@ export const Container = styled.article`
   &:hover {
     transform: translateY(-5px);
   }
-  @media ${(props) => props.theme.breakpoints.TABLETMIN} {
+  @media ${(props) => props.theme.breakpoints.TABLETBIG} {
     width: calc(100% / 3);
     height: inherit;
   }
