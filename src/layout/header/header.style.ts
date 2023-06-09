@@ -47,8 +47,8 @@ export const Nav = styled.nav`
   gap: 10px;
 `;
 
-export const Link = styled.a`
-  padding: 0.5rem 0.5rem;
+export const Link = styled.span`
+  padding: 0.5rem;
   cursor: pointer;
   &:hover {
     border-bottom: 3px solid black;

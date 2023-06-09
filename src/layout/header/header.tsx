@@ -7,10 +7,14 @@ import { useState } from "react";
 import { themeMode } from "../../recoil/Theme";
 import { useRecoilState } from "recoil";
 
-type LinkName = readonly ["About Me", "Introduction", "Skills", "Blogs", "Projects", "Studies", "Languages"];
+// constants
+import { HEADER } from "../../constants/index";
+
+// types
+import { HeaderNav } from "../../types/index";
 
 const Header = () => {
-  const navList: LinkName = ["About Me", "Introduction", "Skills", "Blogs", "Projects", "Studies", "Languages"];
+  const { NAV_LISTS } = HEADER;
 
   const [headerColor, setHeaderColor] = useState<boolean>(false);
 
@@ -36,14 +40,22 @@ const Header = () => {
 
   window.addEventListener("scroll", changeHeaderColor);
 
+  const scrollTo = (location: number) => {
+    window.scrollTo({ top: location, behavior: "smooth" });
+  };
+
   return (
     <S.Header headerColor={headerColor}>
       <S.Wrapper>
         <S.Logo>Rickyshu's Portfolio</S.Logo>
         <S.LeftWrapper>
           <S.Nav>
-            {navList.map((element, index) => {
-              return <S.Link key={index}>{element}</S.Link>;
+            {NAV_LISTS.map(({ id, navName, location }: HeaderNav) => {
+              return (
+                <S.Link key={id} onClick={() => scrollTo(location)}>
+                  {navName}
+                </S.Link>
+              );
             })}
           </S.Nav>
           <S.ThemeWrapper onClick={handleTheme}>{handleThemeMode === "light" ? <S.SunIcon /> : <S.MoonIcon />}</S.ThemeWrapper>
