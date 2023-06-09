@@ -51,14 +51,16 @@ export const ContentSection = styled.ul`
 `;
 
 export const List = styled.li`
-  padding: 4px 6px;
+  padding: 8px;
   display: flex;
   align-items: center;
   word-break: keep-all;
   border-radius: 5px;
+  border-bottom: 1px solid;
 `;
 
 export const Link = styled.a`
+  padding: 8px;
   &:hover {
     color: gray;
   }

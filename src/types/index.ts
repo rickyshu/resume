@@ -5,6 +5,13 @@ export interface Theme {
   LIGHT_THEME: string;
 }
 
+// header
+export interface HeaderNav {
+  id: number;
+  navName: string;
+  location: number;
+}
+
 export interface UserContactInfo {
   id: number;
   Icon: IconType;

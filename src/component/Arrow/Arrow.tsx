@@ -5,9 +5,9 @@ function Arrow() {
   const [showArrow, setShowArrow] = useState<boolean>(false);
 
   const checkScrollDown = () => {
-    if (!showArrow && window.pageYOffset > 400) {
+    if (!showArrow && window.scrollY > 400) {
       setShowArrow(true);
-    } else if (showArrow && window.pageYOffset <= 400) {
+    } else if (showArrow && window.scrollY <= 400) {
       setShowArrow(false);
     }
   };

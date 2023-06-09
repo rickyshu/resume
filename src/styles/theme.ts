@@ -2,7 +2,7 @@ import { DefaultTheme } from "styled-components";
 
 import { SIZE, COLOR } from "../constants/index";
 
-const { TABLET, DESKTOP } = SIZE;
+const { TABLET, DESKTOP, TABLET_BIG } = SIZE;
 const { TITLE_COLOR } = COLOR;
 
 declare module "styled-components" {
@@ -18,6 +18,7 @@ declare module "styled-components" {
     };
     breakpoints: {
       TABLETMIN: string;
+      TABLETBIG: string;
       DESKTOPMIN: string;
     };
   }
@@ -35,6 +36,7 @@ export const lightTheme: DefaultTheme = {
   },
   breakpoints: {
     TABLETMIN: `screen and (min-width: ${TABLET})`,
+    TABLETBIG: `screen and (min-width: ${TABLET_BIG})`,
     DESKTOPMIN: `screen and (min-width: ${DESKTOP})`,
   },
 } as const;
@@ -51,6 +53,7 @@ export const darkTheme: DefaultTheme = {
   },
   breakpoints: {
     TABLETMIN: `screen and (min-width: ${TABLET})`,
+    TABLETBIG: `screen and (min-width: ${TABLET_BIG})`,
     DESKTOPMIN: `screen and (min-width: ${DESKTOP})`,
   },
 } as const;

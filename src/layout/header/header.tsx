@@ -17,8 +17,8 @@ const Header = () => {
   const { NAV_LISTS } = HEADER;
 
   const [headerColor, setHeaderColor] = useState<boolean>(false);
-
   const [handleThemeMode, setHandleThemeMode] = useRecoilState<string>(themeMode);
+  const [clickHamburger, setclickHamburger] = useState<boolean>(false);
 
   const handleTheme = () => {
     if (handleThemeMode === "dark") {
@@ -28,6 +28,10 @@ const Header = () => {
       localStorage.setItem("theme", "dark");
       setHandleThemeMode("dark");
     }
+  };
+
+  const HandleHamburger = () => {
+    setclickHamburger((pre) => !pre);
   };
 
   const changeHeaderColor = () => {
@@ -49,7 +53,8 @@ const Header = () => {
       <S.Wrapper>
         <S.Logo>Rickyshu's Portfolio</S.Logo>
         <S.LeftWrapper>
-          <S.Nav>
+          <S.IconWrapper onClick={HandleHamburger}>{clickHamburger ? <S.CrossIcon /> : <S.HamburgerIcon />}</S.IconWrapper>
+          <S.Nav clickHamburger={clickHamburger}>
             {NAV_LISTS.map(({ id, navName, location }: HeaderNav) => {
               return (
                 <S.Link key={id} onClick={() => scrollTo(location)}>

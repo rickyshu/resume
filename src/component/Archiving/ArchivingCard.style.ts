@@ -41,8 +41,8 @@ export const LogoName = styled.span`
 `;
 
 export const ArchiveDes = styled.div`
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: bold;
 `;
 
 export const ArchiveListContent = styled.li`

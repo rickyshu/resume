@@ -42,7 +42,6 @@ export const Heading = styled.h1`
   color: #fff;
   border-bottom: 0.3rem solid #fff;
   text-shadow: 0.2rem 0.2rem 1rem #555;
-  transform: skew(10deg);
 `;
 export const PersonalName = styled.h3`
   color: #fff;
@@ -51,7 +50,6 @@ export const PersonalName = styled.h3`
   text-align: center;
   padding: 0.2rem 0;
   letter-spacing: 2px;
-  transform: skew(10deg);
 `;
 
 export const ContactInfo = styled.div`
