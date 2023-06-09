@@ -6,8 +6,8 @@ import { useFetchData } from "../../hooks/useFetchData";
 // types
 import { StudiesInfo } from "../../types";
 
-// react component
-import StudiesCard from "./StudiesCard";
+// // react component
+// import StudiesCard from "./StudiesCard";
 
 function Studies() {
   const { data: StudiesData } = useFetchData<Array<StudiesInfo>>(`${import.meta.env.VITE_API_URL}/studies`);
@@ -16,9 +16,19 @@ function Studies() {
       <S.HeadingTitle>Studies</S.HeadingTitle>
       <S.Wrapper>
         <S.ContentSection>
-          <StudiesCard studyName={"스터디 이름"} period={"참여기간"} studyLink={"/"} />
-          {(StudiesData ?? []).map(({ id, period, studyLink, studyName }: StudiesInfo) => {
-            return <StudiesCard key={id} period={period} studyLink={studyLink} studyName={studyName} />;
+          <S.List>이름</S.List>
+          <S.List>기간</S.List>
+          <S.List>링크</S.List>
+          {(StudiesData ?? []).map(({ period, studyLink, studyName }: StudiesInfo) => {
+            return (
+              <>
+                <S.List>{studyName}</S.List>
+                <S.List>{period}</S.List>
+                <S.Link href={studyLink} target="_blank" rel="noreferrer">
+                  링크
+                </S.Link>
+              </>
+            );
           })}
         </S.ContentSection>
       </S.Wrapper>
