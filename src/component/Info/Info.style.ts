@@ -8,7 +8,7 @@ const { TITLE_COLOR } = COLOR;
 
 export const Container = styled.article`
   padding: 3rem 1rem;
-  background: linear-gradient(#5d475e, #877678);
+  background: ${(props) => props.theme.themeStyle.AboutBGColor};
   color: black;
   display: flex;
   justify-content: center;
