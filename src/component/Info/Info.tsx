@@ -14,18 +14,6 @@ import { UserContactInfo } from "../../types/index";
 import ContactCard from "./ContactCard";
 
 function Info() {
-  // pdf로 변환
-  const convertToPDF = () => {
-    const title = window.document.title;
-
-    window.addEventListener("afterprint", () => {
-      window.document.title = title;
-    });
-
-    window.document.title = "　";
-    window.print();
-  };
-
   return (
     <S.Container>
       <S.Wrapper>
@@ -42,10 +30,6 @@ function Info() {
             })}
           </S.RightUserInfo>
         </S.ContactInfo>
-        <S.ConvertToPdf onClick={convertToPDF}>
-          <span>TO PDF</span>
-          <S.PdfIcon />
-        </S.ConvertToPdf>
       </S.Wrapper>
     </S.Container>
   );
