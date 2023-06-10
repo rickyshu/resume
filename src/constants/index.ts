@@ -29,12 +29,12 @@ export const HEADER = {
     {
       id: 2,
       navName: "Introduction",
-      location: 940,
+      location: 910,
     },
     {
       id: 3,
       navName: "Skills",
-      location: 1370,
+      location: 1340,
     },
     {
       id: 4,
