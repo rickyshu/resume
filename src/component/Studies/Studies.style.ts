@@ -61,6 +61,7 @@ export const List = styled.li`
 
 export const Link = styled.a`
   padding: 8px;
+  color: ${(props) => props.theme.themeStyle.fontColor};
   &:hover {
     color: gray;
   }

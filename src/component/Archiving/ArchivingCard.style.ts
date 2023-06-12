@@ -35,13 +35,11 @@ export const LogoImg = styled.img`
 `;
 
 export const LogoName = styled.span`
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: bold;
   text-transform: capitalize;
 `;
 
 export const ArchiveDes = styled.div`
-  font-size: 1.1rem;
   font-weight: bold;
 `;
 

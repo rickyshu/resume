@@ -34,7 +34,7 @@ export const lightTheme: DefaultTheme = {
     ArrowBackGroundColor: "#808080",
     ArrowHoverColor: "#585858",
     cardColor: "#F5F5F5",
-    AboutBGColor: "#9ba6a5",
+    AboutBGColor: "#CAC4A4",
   },
   breakpoints: {
     TABLETMIN: `screen and (min-width: ${TABLET})`,

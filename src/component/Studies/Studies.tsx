@@ -7,8 +7,6 @@ import { useFetchData } from "../../hooks/useFetchData";
 import { StudiesInfo } from "../../types";
 
 import React from "react";
-// // react component
-// import StudiesCard from "./StudiesCard";
 
 function Studies() {
   const { data: StudiesData } = useFetchData<Array<StudiesInfo>>(`${import.meta.env.VITE_API_URL}/studies`);
