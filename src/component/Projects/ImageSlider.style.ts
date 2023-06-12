@@ -15,6 +15,7 @@ export const Slider = styled.div`
 
 export const SlideImg = styled.img`
   width: 100%;
+  /* height: 300px; */
   object-fit: contain;
   border-radius: 8px;
   filter: ${(props) => (props.theme.value === "light" ? "brightness(100%)" : "brightness(60%) contrast(120%)")};
@@ -29,7 +30,6 @@ const CommonIconStyle = css`
   color: gray;
   position: absolute;
   top: 40%;
-  border: 1px solid black;
 `;
 
 export const ArrowRight = styled(RiArrowDropRightLine)`
