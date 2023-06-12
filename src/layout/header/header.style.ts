@@ -42,6 +42,7 @@ export const Wrapper = styled.section`
 export const Logo = styled.div`
   font-size: 1.5rem;
   font-weight: 700;
+  cursor: pointer;
 `;
 
 export const LeftWrapper = styled.div`

@@ -13,12 +13,17 @@ import { HEADER } from "../../constants/index";
 // types
 import { HeaderNav } from "../../types/index";
 
+// react-router
+import { useNavigate } from "react-router-dom";
+
 const Header = () => {
   const { NAV_LISTS } = HEADER;
 
   const [headerColor, setHeaderColor] = useState<boolean>(false);
   const [handleThemeMode, setHandleThemeMode] = useRecoilState<string>(themeMode);
   const [clickHamburger, setclickHamburger] = useState<boolean>(false);
+
+  const navigate = useNavigate();
 
   const handleTheme = () => {
     if (handleThemeMode === "dark") {
@@ -28,6 +33,10 @@ const Header = () => {
       localStorage.setItem("theme", "dark");
       setHandleThemeMode("dark");
     }
+  };
+
+  const handleLogoClick = () => {
+    navigate("/");
   };
 
   const HandleHamburger = () => {
@@ -51,7 +60,7 @@ const Header = () => {
   return (
     <S.Header headerColor={headerColor}>
       <S.Wrapper>
-        <S.Logo>Rickyshu's Portfolio</S.Logo>
+        <S.Logo onClick={handleLogoClick}>Rickyshu's Portfolio</S.Logo>
         <S.LeftWrapper>
           <S.IconWrapper onClick={HandleHamburger}>{clickHamburger ? <S.CrossIcon /> : <S.HamburgerIcon />}</S.IconWrapper>
           <S.Nav clickHamburger={clickHamburger}>

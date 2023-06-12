@@ -1,16 +1,18 @@
-import { Outlet } from "react-router-dom";
-
 // react-component
 import Header from "./header/header";
 import Main from "./main/Main";
 
-export default function GeneralLayout() {
+interface GeneralLayoutProps {
+  children: React.ReactNode;
+}
+
+const GeneralLayout: React.FC<GeneralLayoutProps> = ({ children }) => {
   return (
     <>
       <Header />
-      <Main>
-        <Outlet />
-      </Main>
+      <Main>{children}</Main>
     </>
   );
-}
+};
+
+export default GeneralLayout;

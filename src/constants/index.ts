@@ -89,7 +89,7 @@ export const CONTACTINFO: ContactInfoArray = {
       id: 5,
       Icon: RiPencilFill,
       AboutMeTitle: "학력",
-      AboutMeInfo: "연세대학교(신촌)-사회학과",
+      AboutMeInfo: "연세대학교(신촌) 사회학과",
     },
   ],
 };

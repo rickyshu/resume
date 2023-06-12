@@ -5,16 +5,25 @@ import { Router as RemixRouter } from "@remix-run/router/dist/router";
 import GeneralLayout from "./layout/GeneralLayout";
 import Home from "./page/Home/Home";
 
-export const routers: RemixRouter = createBrowserRouter([
+interface RouterElement {
+  id: number;
+  path: string;
+  element: React.ReactNode;
+}
+
+const routerData: RouterElement[] = [
   {
+    id: 0,
     path: "/",
-    element: <GeneralLayout />,
-    // errorElement: <NotFound />,
-    children: [
-      {
-        index: true,
-        element: <Home />,
-      },
-    ],
+    element: <Home />,
   },
-]);
+];
+
+export const routers: RemixRouter = createBrowserRouter(
+  routerData.map((router) => {
+    return {
+      path: router.path,
+      element: <GeneralLayout>{router.element}</GeneralLayout>,
+    };
+  })
+);

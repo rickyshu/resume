@@ -29,6 +29,7 @@ const CommonIconStyle = css`
   color: gray;
   position: absolute;
   top: 40%;
+  border: 1px solid black;
 `;
 
 export const ArrowRight = styled(RiArrowDropRightLine)`
