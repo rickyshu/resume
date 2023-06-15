@@ -83,7 +83,7 @@ export const CONTACTINFO: ContactInfoArray = {
       id: 4,
       Icon: RiMailFill,
       AboutMeTitle: "이메일",
-      AboutMeInfo: "hoinleekk@gmail.com",
+      AboutMeInfo: "hoinleekk@naver.com",
     },
     {
       id: 5,

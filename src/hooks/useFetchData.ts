@@ -1,21 +1,19 @@
-import { useState, useEffect } from "react";
+// axios
 import axios from "axios";
 
-export function useFetchData<T>(url: string) {
-  const [data, setData] = useState<T | null>(null);
+// react query
+import { useQuery } from "@tanstack/react-query";
 
+export function useFetchData<T>(url: string) {
   const fetchData = async (url: string) => {
-    try {
-      const response = await axios.get(url);
-      setData(response.data);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
+    const response = await axios.get(url);
+    return response.data;
   };
 
-  useEffect(() => {
-    fetchData(url);
-  }, [url]);
+  const { data } = useQuery<T>({
+    queryKey: ["data", url],
+    queryFn: () => fetchData(url),
+  });
 
   return { data };
 }

@@ -15,7 +15,6 @@ export const Slider = styled.div`
 
 export const SlideImg = styled.img`
   width: 100%;
-  /* height: 300px; */
   object-fit: contain;
   border-radius: 8px;
   filter: ${(props) => (props.theme.value === "light" ? "brightness(100%)" : "brightness(60%) contrast(120%)")};
